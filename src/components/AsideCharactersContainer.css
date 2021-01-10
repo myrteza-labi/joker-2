@@ -1,0 +1,6 @@
+.AsideCharactersContainer{
+    border: 1px solid black; 
+    height: 100%; 
+    position: relative; 
+    text-align: center; 
+}

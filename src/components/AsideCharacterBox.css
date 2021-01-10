@@ -1,0 +1,23 @@
+.AsideCharacterImage {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.AsideCharactherdescription{
+    position: absolute; 
+    top: 200px; 
+    left: 200px; 
+}
+
+.AsideCharactherdescription{
+    color: #fff; 
+    font-family: impact; 
+    text-shadow: black 0.1em 0.1em 0.2em; 
+}
+
+.AsideCharactherText {
+    color: white; 
+    font-family: impact; 
+    text-shadow: black 0.1em 0.1em 0.2em; 
+    font-size: 24px; 
+}
