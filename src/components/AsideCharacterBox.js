@@ -7,100 +7,92 @@ import Nightwing from '../images/ennemies/nightwing.jpg';
 
 function AsideCharacterBox(props){
     const character = props.character; 
-    const batman =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Batman}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>BATMAN</h2>
-                            <p className='AsideCharactherText'>Je suis le pire ennemie du Joker</p>
+    
+    const batman = character=='Batman'?<div className="carousel-item active">
+                        <img src={Batman} className="d-block w-100" alt="..."/>
+                        <div className="carousel-caption d-none d-md-block">
+                            <h2>First slide label</h2>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
                         </div>
-                    </div>
-                    
-    const robin =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Robin}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>ROBIN</h2>
-                            <p className='AsideCharactherText'>Fidèle compagnon de Batman</p>
-                        </div>
-                    </div>
-    const batgirl =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Batgirl}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>BATGIRL</h2>
-                            <p className='AsideCharactherText'>Je souhaite tué Joker à tout prix</p>
-                        </div>
-                    </div>
-    const nightwing =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Nightwing}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>NIGHTWING</h2>
-                            <p className='AsideCharactherText'>Je suis les ailles de la nuit</p>
-                        </div>
-                    </div>
-
-    const harleyQuinn =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Batman}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>BATMAN</h2>
-                            <p className='AsideCharactherText'>Je suis le pire ennemie du Joker</p>
-                        </div>
-                    </div>
-
-    const penguin =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Batman}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>BATMAN</h2>
-                            <p className='AsideCharactherText'>Je suis le pire ennemie du Joker</p>
-                        </div>
-                    </div>
-
-    const blackMask =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Batman}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>BATMAN</h2>
-                            <p className='AsideCharactherText'>Je suis le pire ennemie du Joker</p>
-                        </div>
-                    </div>
-
-    const lexLuthor =  <div className='AsideCharacterBox'>
-                        <img className='AsideCharacterImage' src={Batman}></img>
-                        <div className='AsideCharactherdescription'>
-                            <h2 className='AsideCharactherTitle'>BATMAN</h2>
-                            <p className='AsideCharactherText'>Je suis le pire ennemie du Joker</p>
-                        </div>
-                    </div>
+                    </div>: null; 
 
 
-    if(character== 'batman'){
+    const robin =   character=='Robin'?<div className="carousel-item active">
+                        <img src={Robin} className="d-block w-100" alt="..."/>
+                        <div className="carousel-caption d-none d-md-block">
+                            <h2>First slide label</h2>
+                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        </div>
+                    </div>: null; 
+
+
+    const batgirl = character=='Batgirl'?<div className="carousel-item">
+                        <img src={Batgirl} className="d-block w-100" alt="..."/>
+                        <div className="carousel-caption d-none d-md-block">
+                            <h2>Second slide label</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        </div>
+                    </div>: null; 
+
+
+    const nightwing =  character=='Nightwing'?<div className="carousel-item">
+                            <img src={Nightwing} className="d-block w-100" alt="..."/>
+                            <div className="carousel-caption d-none d-md-block">
+                                <h2>Third slide label</h2>
+                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                            </div>
+                        </div>: null ; 
+
+    const characterTest = props.characterTest; 
+
+    if (characterTest=='Batman'){
         return (
-            batman
+            <div className="carousel-item active">
+                <img src={Batman} className="d-block w-100" alt="..."/>
+                <div className="carousel-caption d-none d-md-block">
+                    <h2>BATMAN</h2>
+                    <h3>Le pire ennemie du Joker</h3>
+                </div>
+            </div>
         )
-    } else if(character=='robin'){
+    }else if (characterTest=='Robin'){
         return (
-            robin
+            <div className="carousel-item ">
+                <img src={Robin} className="d-block w-100" alt="..."/>
+                <div className="carousel-caption d-none d-md-block">
+                    <h2>ROBIN</h2>
+                    <h3>Il soutient Batman dans sa lutte contre le Joker</h3>
+                </div>
+            </div>
         )
-    } else if(character=='batgirl'){
-        return (
-            batgirl
+    } else if (characterTest=='Batgirl'){
+        return(
+            <div className="carousel-item ">
+                <img src={Batgirl} className="d-block w-100" alt="..."/>
+                <div className="carousel-caption d-none d-md-block">
+                    <h2>BATGIRL</h2>
+                    <p>Ennemie juré du Joker</p>
+                </div>
+            </div>
         )
-    } else if(character=='nightwing'){
+    } else if (characterTest=='Nightwing'){
         return (
-            nightwing
-        )
-    } else {
-        return (
-            <h2>error</h2>
+            <div className="carousel-item ">
+                <img src={Nightwing} className="d-block w-100" alt="..."/>
+                <div className="carousel-caption d-none d-md-block">
+                    <h2>NIGHTWING</h2>
+                    <h3>Il trouve toujour un moyen de contrecarer les plan du Joker</h3>
+                </div>
+            </div>
         )
     }
-    /*return (
-        batman
+ 
+
+    return (
+        {characterTest}
     )
-        <div className='AsideCharacterBox'>
-            <img className='AsideCharacterImage' src={Batman}></img>
-            <div className='AsideCharactherdescriptionContainer'>
-                <h2 className='AsideCharactherdescription'>Je suis Batman</h2>
-            </div>
-        </div>*/
-    
 }
 
 export default AsideCharacterBox; 
+
+
