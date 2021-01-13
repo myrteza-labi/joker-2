@@ -3,21 +3,17 @@
     height: auto; 
 }
 
-.AsideCharactherdescription{
-    position: absolute; 
-    top: 200px; 
-    left: 200px; 
-}
-
-.AsideCharactherdescription{
-    color: #fff; 
+.AsideCharacterDescription{
     font-family: impact; 
-    text-shadow: black 0.1em 0.1em 0.2em; 
-}
-
-.AsideCharactherText {
+    font-size: 36px; 
     color: white; 
-    font-family: impact; 
-    text-shadow: black 0.1em 0.1em 0.2em; 
-    font-size: 24px; 
+    text-shadow: black 0.1em 0.1em 0.2em;
 }
+
+.AsideCharacterTitle{
+    font-family: impact; 
+    font-size: 50px; 
+    color: white; 
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+

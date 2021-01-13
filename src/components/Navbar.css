@@ -22,3 +22,16 @@
     position: fixed;
     width: 100%; 
 }
+
+.nav-item{
+    font-family: 'East Sea Dokdo';  
+    font-size: 24px;
+    letter-spacing: 3px; 
+}
+
+.navbar-brand {
+    font-family: 'East Sea Dokdo';  
+    font-size: 34px;
+    letter-spacing: 3px; 
+    color: red !important; 
+}
