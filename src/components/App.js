@@ -1,11 +1,9 @@
 import React from 'react'; 
 import Navbar from './Navbar'; 
 import HomeImage from './HomeImage'; 
-import CharacterBox from './CharacterBoxThumbnail'; 
-import CharactersBoxContainer from './CharactersBoxContainer';
-import AsideCharactersContainer from './AsideCharactersContainer'
+import Carousel from './Carousel'
 import AsideCharacterBox from './AsideCharacterBox';
-
+import JokerEvolution from './JokerEvolution'; 
 class App extends React.Component{
     constructor(props){
         super(props); 
@@ -15,19 +13,25 @@ class App extends React.Component{
             <div>
                 <Navbar/>
                 <HomeImage/>
-                <CharactersBoxContainer/>
-                <AsideCharactersContainer sliderNumber={'1'}>
+                <Carousel sliderNumber={'1'}>
+                    <JokerEvolution joker='1'/>
+                    <JokerEvolution joker='2'/>
+                    <JokerEvolution joker='3'/>
+                    <JokerEvolution joker='4'/>
+                </Carousel>
+                <Carousel sliderNumber={'2'}>
                     <AsideCharacterBox character={'Harley-quinn'}/>
                     <AsideCharacterBox character={'Penguin'}/>
                     <AsideCharacterBox character={'Black-mask'}/>
                     <AsideCharacterBox character={'Lex-luthor'}/>
-                </AsideCharactersContainer>
-                <AsideCharactersContainer sliderNumber={'2'}>
+                </Carousel>
+                <Carousel sliderNumber={'3'}>
                     <AsideCharacterBox character={'Batman'}/>
                     <AsideCharacterBox character={'Robin'}/>
                     <AsideCharacterBox character={'Batgirl'}/>
                     <AsideCharacterBox character={'Nightwing'}/>
-                </AsideCharactersContainer>
+                </Carousel>
+                
                 
             </div>
         )
@@ -35,6 +39,25 @@ class App extends React.Component{
 }
 
 export default App; 
+
+/*
+
+ <div id='JokerEvolution' className='container-fluid'>
+                    <JokerEvolution joker='1'/>
+                    <JokerEvolution joker='2'/>
+                    <JokerEvolution joker='3'/>
+                    <JokerEvolution joker='4'/>
+                </div>
+
+
+<Carousel sliderNumber={'1'}>
+                    <AsideCharacterBox character={'Harley-quinn'}/>
+                    <AsideCharacterBox character={'Penguin'}/>
+                    <AsideCharacterBox character={'Black-mask'}/>
+                    <AsideCharacterBox character={'Lex-luthor'}/>
+                </Carousel>
+
+*/
 /*
                 <AsideCharactersContainer>
                     <AsideCharacterBox character={'Batman'}/>

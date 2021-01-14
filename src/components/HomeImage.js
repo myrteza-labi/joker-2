@@ -1,10 +1,10 @@
 import React from 'react'; 
 import './HomeImage.css'; 
-import Joker from '../images/joker-HomeImage.jpeg';  
+import Joker from '../images/joker/joker-home.jpg';  
 
 function HomeImage(){
     return (
-        <img className='HomeImage' src={Joker}/>
+        <img id='HomeImage' alt='' className='HomeImage' src={Joker}/>
     )
 }
 

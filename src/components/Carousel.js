@@ -1,19 +1,18 @@
 import React from 'react'; 
-import './AsideCharactersContainer.css'; 
-import AsideCharacterBox from './AsideCharacterBox'; 
+import './Carousel.css'; 
 
-function AsideCharactersContainer(props){
+function Carousel(props){
 
     const sliderNumber= props.sliderNumber; 
 
     return (
         <div>
-        <div id={"carouselExampleCaptions"+sliderNumber} className="carousel slide" data-bs-ride="carousel">
+        <div id={"carouselExampleCaptions"+sliderNumber} className="carousel carousel-dark slide " data-bs-interval="false" data-bs-ride="carousel">
             <ol className="carousel-indicators">
-                <li data-bs-target={"#carouselExampleCaptions"+sliderNumber} data-bs-slide-to="0" className="active"></li>
                 <li data-bs-target={"#carouselExampleCaptions"+sliderNumber} data-bs-slide-to="1"></li>
                 <li data-bs-target={"#carouselExampleCaptions"+sliderNumber} data-bs-slide-to="2"></li>
                 <li data-bs-target={"#carouselExampleCaptions"+sliderNumber} data-bs-slide-to="3"></li>
+                <li data-bs-target={"#carouselExampleCaptions"+sliderNumber} data-bs-slide-to="4"></li>
             </ol>
             <div className="carousel-inner">
                {props.children}
@@ -30,5 +29,5 @@ function AsideCharactersContainer(props){
     </div>
     )
 }
-export default AsideCharactersContainer; 
+export default Carousel; 
 

@@ -1,6 +1,10 @@
-.AsideCharactersContainer{
+.Carousel{
     border: 1px solid black; 
     height: 100%; 
     position: relative; 
     text-align: center; 
+}
+
+.carousel{
+    border: 20px solid black ; 
 }
